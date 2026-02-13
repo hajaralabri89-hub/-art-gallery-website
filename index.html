@@ -1157,7 +1157,24 @@
             const details = document.getElementById(detailsId);
             details.classList.toggle('expanded');
         }
-
+        // Toggle artwork details
+      function toggleDetails(detailsId) {
+           const details = document.getElementById(detailsId);
+           const isExpanding = !details.classList.contains('expanded');
+    
+          details.classList.toggle('expanded');
+    
+        // Scroll to show the expanded details
+           if (isExpanding) {
+               setTimeout(() => {
+                  // Find the parent artwork card and scroll to it
+                  const card = details.closest('.artwork-card');
+                  if (card) {
+                      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }
+              }, 100);
+          }
+      }
         // Modal functions
         function openInquiry(artworkName) {
             document.getElementById('inquiryModal').style.display = 'flex';
