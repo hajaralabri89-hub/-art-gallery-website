@@ -960,7 +960,12 @@
                     <h3>Houses on Blue Hill Art Postcard</h3>
                     <p>A beautifully printed postcard showcasing the Houses on Blue Hill artwork. The reverse side is left blank for your personal message. Size: A6 (14.8 × 10.5 cm).</p>
                     <div class="price">€6.00</div>
-                    <button class="buy-btn" onclick="event.stopPropagation(); checkout('Postcard Houses on Blue Hill', 6)">Add to Cart</button>
+                    <div id="paypal-container-JFLZR7HDL4QEE"></div>
+                    <script>
+                        paypal.HostedButtons({
+                            hostedButtonId: "JFLZR7HDL4QEE",
+                        }).render("#paypal-container-JFLZR7HDL4QEE")
+                    </script>
                 </div>
             </div>
 
