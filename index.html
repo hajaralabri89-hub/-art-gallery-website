@@ -942,7 +942,12 @@
                     <h3>Art Collection Postcard</h3>
                     <p>A thoughtfully designed postcard featuring four selected artworks on the front, with a lined reverse for writing your message. Ideal for sending or collecting. Size: A6 (14.8 × 10.5 cm).</p>
                     <div class="price">€6.50</div>
-                    <button class="buy-btn" onclick="event.stopPropagation(); checkout('Postcard with printed collection of artworks', 6.50)">Add to Cart</button>
+                    <div id="paypal-container-UU98YLYC4VWEQ"></div>
+                    <script>
+                        paypal.HostedButtons({
+                            hostedButtonId: "UU98YLYC4VWEQ",
+                        }).render("#paypal-container-UU98YLYC4VWEQ")
+                     </script>
                 </div>
             </div>
 
